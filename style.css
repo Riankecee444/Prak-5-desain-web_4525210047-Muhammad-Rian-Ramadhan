@@ -1,0 +1,519 @@
+/* PENGATURAN DASAR */
+:root {
+    --oren: #f47721;
+    --oren-gelap: #d95b0b;
+    --oren-muda: #fff1e6;
+    --putih: #ffffff;
+    --teks: #292929;
+    --abu: #777777;
+    --garis: #eeeeee;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--teks);
+    background: var(--putih);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.description {
+    color: var(--abu);
+    margin: 5px 0 18px;
+}
+
+/* AREA 1: HEADER */
+.header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 6%;
+    background: var(--putih);
+    border-bottom: 1px solid var(--garis);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--teks);
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--oren);
+}
+
+.search {
+    display: flex;
+}
+
+.search input {
+    width: 100%;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #dddddd;
+    border-radius: 8px 0 0 8px;
+    font-size: 14px;
+    outline-color: var(--oren);
+}
+
+.search button {
+    padding: 12px 20px;
+    border: none;
+    background: var(--oren);
+    color: white;
+    border-radius: 0 8px 8px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* AREA 2: NAVIGASI */
+.navigation {
+    display: flex;
+    gap: 28px;
+    padding: 14px 6%;
+    border-bottom: 1px solid var(--garis);
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.navigation a:hover {
+    color: var(--oren);
+}
+
+/* KONTEN UTAMA */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 28px;
+}
+
+/* AREA 3: BANNER PROMOSI */
+.banner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 25px;
+    align-items: center;
+    margin: 30px 0 45px;
+    padding: 38px;
+    background: linear-gradient(120deg, #fff1e6, #ffe0c7);
+    border-radius: 16px;
+}
+
+.label {
+    display: inline-block;
+    padding: 5px 12px;
+    color: var(--oren-gelap);
+    background: #ffffff;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.banner h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 14px 0;
+}
+
+.banner-text > p:not(.label) {
+    color: #6b625d;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 22px;
+    background: var(--oren);
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: var(--oren-gelap);
+}
+
+.banner-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 210px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px dashed #f3b486;
+    border-radius: 14px;
+    color: #a65a2a;
+}
+
+/* JUDUL BAGIAN */
+section {
+    margin-bottom: 45px;
+}
+
+/* AREA 4: KATEGORI */
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.category {
+    padding: 22px 15px;
+    text-align: center;
+    border: 1px solid var(--garis);
+    border-radius: 12px;
+    background: white;
+    transition: 0.2s;
+}
+
+.category:hover {
+    border-color: var(--oren);
+    transform: translateY(-3px);
+}
+
+.category-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto;
+    background: var(--oren-muda);
+    border-radius: 16px;
+    color: var(--oren-gelap);
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.category h3 {
+    margin: 12px 0 0;
+    font-size: 15px;
+}
+
+/* AREA 5: PRODUK */
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.section-title > a {
+    color: var(--oren-gelap);
+    font-weight: bold;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.product {
+    border: 1px solid var(--garis);
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    transition: 0.2s;
+}
+
+.product:hover {
+    border-color: #f4b184;
+    box-shadow: 0 8px 22px rgba(80, 45, 15, 0.08);
+    transform: translateY(-3px);
+}
+
+.product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 155px;
+    padding: 10px;
+    background: #fff7f0;
+    color: #a07860;
+    border-bottom: 1px solid #f8e4d5;
+    text-align: center;
+}
+
+.product-info {
+    padding: 14px;
+}
+
+.product-info p {
+    margin: 0 0 5px;
+    color: var(--abu);
+    font-size: 12px;
+}
+
+.product-info h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.product-info strong {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--oren-gelap);
+}
+
+.product-info button {
+    width: 100%;
+    padding: 11px 5px;
+    border: none;
+    border-radius: 7px;
+    background: var(--oren);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product-info button:hover {
+    background: var(--oren-gelap);
+}
+
+/* AREA 6: INFORMASI LAYANAN */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.services div {
+    padding: 20px;
+    background: #fff8f2;
+    border: 1px solid #f8e5d6;
+    border-radius: 12px;
+}
+
+.services h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.services p {
+    margin: 0;
+    color: var(--abu);
+    font-size: 13px;
+}
+
+/* AREA 7: FOOTER */
+.footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 25px;
+    padding: 32px 6%;
+    background: #292929;
+    color: white;
+}
+
+.footer p {
+    color: #cccccc;
+    font-size: 13px;
+}
+
+.footer h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.footer .logo {
+    color: white;
+}
+
+.footer .logo span {
+    color: #ff9a52;
+}
+
+.footer > div:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 14px;
+}
+
+.footer > div a:hover {
+    color: #ff9a52;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    padding-top: 15px;
+    border-top: 1px solid #555555;
+}
+
+/* RESPONSIVE UNTUK HP */
+@media (max-width: 700px) {
+    .header {
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .search {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .header-menu {
+        flex-direction: column;
+        gap: 3px;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .navigation {
+        gap: 20px;
+        padding: 12px 15px;
+    }
+
+    main {
+        padding: 0 15px;
+    }
+
+    .banner {
+        grid-template-columns: 1fr;
+        padding: 23px;
+        gap: 18px;
+        margin-top: 20px;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .banner-image {
+        min-height: 140px;
+    }
+
+    .category-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .category {
+        padding: 16px 8px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product-image {
+        min-height: 110px;
+        font-size: 12px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .product-info button {
+        font-size: 11px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        padding: 25px 15px;
+        gap: 20px;
+    }
+
+    .footer > div:first-child {
+        grid-column: 1 / -1;
+    }
+}
+/* GAMBAR BANNER PROMOSI */
+.banner-image {
+    padding: 0;
+    overflow: hidden;
+}
+
+.banner-image img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* GAMBAR KATEGORI */
+.category-image {
+    overflow: hidden;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* GAMBAR PRODUK */
+.product-image {
+    padding: 0;
+    overflow: hidden;
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 155px;
+    object-fit: contain;
+}
+
+/* GAMBAR DI LAYAR HP */
+@media (max-width: 700px) {
+    .banner-image img {
+        height: 130px;
+    }
+
+    .product-image img {
+        height: 110px;
+    }
+}
